@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "0306d743-e183-41f3-bce0-4f3201e60049",
+		"name": "DegreeTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET 49.235.39.226:8080/bysj/degree.ctl",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\n        \"description\": \"11\",\n        \"id\": 3,\n        \"no\": \"0102\",\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "49.235.39.226:8080/bysj/degree.ctl",
+					"host": [
+						"49",
+						"235",
+						"39",
+						"226"
+					],
+					"port": "8080",
+					"path": [
+						"bysj",
+						"degree.ctl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST 49.235.39.226:8080/bysj/degree.ctl",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\n        \"description\": \"11\",\n        \"id\": 4,\n        \"no\": \"0102\",\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "49.235.39.226:8080/bysj/degree.ctl",
+					"host": [
+						"49",
+						"235",
+						"39",
+						"226"
+					],
+					"port": "8080",
+					"path": [
+						"bysj",
+						"degree.ctl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE 49.235.39.226:8080/bysj/degree.ctl",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\n        \"description\": \"11\",\n        \"id\": 4,\n        \"no\": \"0102\",\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "49.235.39.226:8080/bysj/degree.ctl?id=4",
+					"host": [
+						"49",
+						"235",
+						"39",
+						"226"
+					],
+					"port": "8080",
+					"path": [
+						"bysj",
+						"degree.ctl"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT 49.235.39.226:8080/bysj/degree.ctl",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"description\": \"博士\",\r\n        \"id\": 2,\r\n        \"no\": \"02\",\r\n        \"remarks\": \"\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "49.235.39.226:8080/bysj/degree.ctl",
+					"host": [
+						"49",
+						"235",
+						"39",
+						"226"
+					],
+					"port": "8080",
+					"path": [
+						"bysj",
+						"degree.ctl"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

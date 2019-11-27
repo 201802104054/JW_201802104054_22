@@ -1,0 +1,50 @@
+create table Degree(
+id bigint not null auto_increment,
+no varchar(255) not null,
+description varchar(255) not null,
+remarks varchar(255),
+primary key(id)
+);
+
+create table School(
+id bigint not null auto_increment,
+description varchar(255) not null,
+no varchar(255) not null,
+remarks varchar(255),
+primary key (id)
+);
+
+
+create table Department(
+id bigint not null auto_increment,
+description varchar(255) not null,
+no varchar(255) not null,
+remarks varchar(255),
+school_id bigint not null,
+FOREIGN KEY(school_id) REFERENCES School(id),
+primary key (id)
+);
+
+
+
+create table ProfTitle(
+id bigint not null auto_increment,
+no varchar(255) not null,
+description varchar(255) not null,
+remarks varchar(255),
+primary key(id)
+);
+
+
+
+create table Teacher(
+id  bigint not null auto_increment,
+name varchar(255) not null,
+proftitle_id bigint not null,
+degree_id bigint not null,
+department_id bigint not null,
+foreign key(protitle_id) references ProfTitle(id),
+foreign key(degree_id) references Degree(id),
+foreign key(department_id) references Department(id),
+primary key(id)
+);

@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "7033631d-aef9-41e2-8f88-9545427c5767",
+		"name": "Department",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET 49.235.39.226:8080/bysj/department.ctl",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5633a10e-04f3-4d60-8c6b-c3ef1f7ee04e",
+						"exec": [
+							"tests[\"Body matches string 信管\"] = responseBody.has(\"信管\");",
+							"tests[\"Body matches string 房管\"] = responseBody.has(\"房管\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"description\": \"信管12312312312\",\r\n        \"no\": \"0231312312\",\r\n        \"school\": {\r\n            \"description\": \"管理学院\",\r\n            \"id\": 1,\r\n            \"no\": \"02\",\r\n            \"remarks\": \"0\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "49.235.39.226:8080/bysj3/department.ctl",
+					"host": [
+						"49",
+						"235",
+						"39",
+						"226"
+					],
+					"port": "8080",
+					"path": [
+						"bysj3",
+						"department.ctl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST 49.235.39.226:8080/bysj/department.ctl",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4a49215e-9c3b-4de9-b43d-71d52e57f4f2",
+						"exec": [
+							"var jsonDate = JSON.parse(responseBody)",
+							"tests[\"增加成功？\"] = jsonDate.message === \"增加成功\""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"description\": \"工管11111\",\r\n        \"no\": \"03\",\r\n        \"school\": {\r\n            \"description\": \"管理学院\",\r\n            \"id\": 1,\r\n            \"no\": \"01\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "49.235.39.226:8080/bysj3/department.ctl",
+					"host": [
+						"49",
+						"235",
+						"39",
+						"226"
+					],
+					"port": "8080",
+					"path": [
+						"bysj3",
+						"department.ctl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE 49.235.39.226:8080/bysj/department.ctl",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"description\": \"工管\",\r\n        \"id\": 1027,\r\n        \"no\": \"03\",\r\n        \"school\": {\r\n            \"description\": \"管理学院\",\r\n            \"id\": 1,\r\n            \"no\": \"01\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "49.235.39.226:8080/bysj3/department.ctl?id=1146",
+					"host": [
+						"49",
+						"235",
+						"39",
+						"226"
+					],
+					"port": "8080",
+					"path": [
+						"bysj3",
+						"department.ctl"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1146"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT 49.235.39.226:8080/bysj/department.ctl",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"description\": \"工管\",\r\n        \"id\": 1077,\r\n        \"no\": \"01\",\r\n        \"school\": {\r\n            \"description\": \"管理学院\",\r\n            \"id\": 1,\r\n            \"no\": \"01\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "49.235.39.226:8080/bysj/department.ctl",
+					"host": [
+						"49",
+						"235",
+						"39",
+						"226"
+					],
+					"port": "8080",
+					"path": [
+						"bysj",
+						"department.ctl"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
